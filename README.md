@@ -14,13 +14,14 @@ pip install pytz tzlocal
 
 Example:
 
-utime
-Current Time Information:
-==============================
-UTC Time     : 2024-08-17 19:40:46 UTC
-Local Time   : 2024-08-17 12:40:46 PDT
-Time Zone    : America/Los_Angeles
-DST Active   : Yes
-==============================
+utime. 
+Current Time Information:  
+==============================. 
+UTC Time     : 2024-08-17 19:40:46 UTC  
+Local Time   : 2024-08-17 12:40:46 PDT  
+Time Zone    : America/Los_Angeles  
+DST Active   : Yes  
+==============================  
+
 
 
