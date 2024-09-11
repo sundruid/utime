@@ -31,18 +31,18 @@ Output:
 
 ### epoch
 
-epoch
-
-Output:
-1692280846
-
-This prints the current time in Unix epoch format.
-
-epoch @1692280846
-
-Output:
-2024-08-17 12:40:46
-
-This converts a given Unix epoch timestamp into a local time format.
-
-By having these two tools (`utime` for detailed UTC to local time info and `epoch` for Unix timestamp conversions), you can quickly reference or convert times when working across different systems and time zones.
+    epoch
+    
+    Output:
+    1692280846
+    
+    This prints the current time in Unix epoch format.
+    
+    epoch @1692280846
+    
+    Output:
+    2024-08-17 12:40:46
+    
+    This converts a given Unix epoch timestamp into a local time format.
+    
+    By having these two tools (`utime` for detailed UTC to local time info and `epoch` for Unix timestamp conversions), you can quickly reference or convert times when working across different systems and time zones.
