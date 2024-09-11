@@ -1,0 +1,36 @@
+#!/bin/sh
+
+# Function to display usage information
+usage() {
+  echo "Usage: $0 [@<epoch>] [-beat] [-h]"
+  echo "  If no argument is provided, the current epoch time is printed."
+  echo "  If @<epoch> is provided, it will convert the given epoch time to local time."
+  echo "  -beat  Print the current Swatch Internet Time (Beat Time)."
+  echo "  -h     Show this help message."
+  exit 1
+}
+
+# Check if the user passed the -h flag for help or invalid input
+if [ "$1" = "-h" ] || [ $# -gt 1 ]; then
+  usage
+fi
+
+# Handle the -beat option
+if [ "$1" = "-beat" ]; then
+  # Calculate and print Swatch Internet Time (Beat Time)
+  date -u +"%s" | awk '{printf("@%03d\n", (($1 + 3600) % 86400) * 1000 / 86400)}'
+  exit 0
+fi
+
+# If no argument is provided, print the current epoch time
+if [ -z "$1" ]; then
+  date +%s
+else
+  # If argument is provided but not in the format @<epoch>, display usage
+  if [ "$(echo "$1" | cut -c1)" != "@" ]; then
+    usage
+  fi
+
+  # Convert the provided epoch time to local time
+  date -d "$1"
+fi
