@@ -1,6 +1,7 @@
 # utime
 Simple UTC to local time app for quick reference.
 
+Drop into your /usr/bin/local directory. No extension needed as interpreter is specified in file.
 
 When scouring logs and various WW linux systems, its easy to get confused as to what TZ the system is in and what that is in UTC. So I made a simple python script that will give me this information quickly. I run it on my Mac laptop as well as systems in the cloud.
 
